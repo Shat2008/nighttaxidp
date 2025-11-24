@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Нічне Таксі — VIP • 24/7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#05060a; --card:#0b0d10; --accent:#ffd600; --accent-2:#ffb300; --muted:#9aa4b2; --glass: rgba(255,255,255,0.04);
+      --radius:14px; --shadow: 0 6px 30px rgba(0,0,0,0.6);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#eef3ff;background:linear-gradient(180deg,#020306 0%, #07101a 60%);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 36px;background:linear-gradient(90deg, rgba(255,214,0,0.06), transparent);backdrop-filter: blur(6px);position:sticky;top:0;z-index:60}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:900;color:#07101a;font-size:20px;box-shadow:0 6px 22px rgba(255,182,0,0.12), inset 0 -6px 18px rgba(0,0,0,0.12)}
+    .brand h1{font-size:18px;margin:0}
+    .brand p{margin:0;font-size:13px;color:var(--muted)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:var(--accent);color:#07101a;padding:10px 16px;border-radius:12px;font-weight:800}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted)}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:32px;align-items:center;padding:70px 6% 40px}
+    .hero-left{max-width:820px}
+    .eyebrow{display:inline-block;background:linear-gradient(90deg, rgba(255,214,0,0.06), transparent);padding:8px 14px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px}
+    .hero h2{font-size:48px;line-height:1.02;margin:18px 0;color:#fff;text-shadow:0 6px 30px rgba(0,0,0,0.6)}
+    .lead{font-size:18px;color:var(--muted);margin-bottom:22px}
+
+    .features{display:flex;gap:14px;margin-top:18px}
+    .feature{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:14px;border-radius:12px;flex:1;text-align:center;border:1px solid rgba(255,255,255,0.03)}
+    .feature h4{margin:0 0 6px 0}
+    .feature p{margin:0;color:var(--muted)}
+
+    /* CARD */
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.03);box-shadow:var(--shadow)}
+    .card .phones a{display:block;text-decoration:none;margin-bottom:10px;padding:12px;border-radius:10px;font-weight:800;background:linear-gradient(90deg,#08101a,#0f1720);color:var(--accent);text-align:center}
+    .telegram{display:block;margin-top:8px;text-align:center}
+    .telegram a{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid rgba(255,255,255,0.06);text-decoration:none;color:var(--muted)}
+
+    /* SLIDESHOW */
+    .slideshow{position:relative;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);height:420px;background:linear-gradient(180deg,#071018 0%, #0b1116 100%)}
+    .slides{width:100%;height:100%;display:flex;transition:transform .55s cubic-bezier(.22,.9,.36,1)}
+    .slide{min-width:100%;height:100%;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:18px}
+    .slide .caption{background:linear-gradient(180deg, rgba(0,0,0,0.0), rgba(0,0,0,0.5));padding:12px;border-radius:10px;color:#fff}
+    .dots{position:absolute;left:50%;transform:translateX(-50%);bottom:12px;display:flex;gap:8px}
+    .dot{width:12px;height:12px;border-radius:999px;background:rgba(255,255,255,0.08);cursor:pointer;border:1px solid rgba(0,0,0,0.25)}
+    .dot.active{background:var(--accent);box-shadow:0 6px 18px rgba(255,182,0,0.12)}
+    .arrow{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.35);border-radius:999px;padding:10px;cursor:pointer;border:1px solid rgba(255,255,255,0.03)}
+    .arrow.left{left:12px}
+    .arrow.right{right:12px}
+    .arrow svg{width:20px;height:20px;fill:#fff}
+
+    /* ABOUT / TEXT */
+    .section{padding:60px 6%;}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+    .text-large{font-size:18px;color:var(--muted);line-height:1.9}
+
+    /* FOOTER */
+    footer{padding:36px 6%;background:#06070b;margin-top:40px;border-top:1px solid rgba(255,255,255,0.02)}
+    .footer-grid{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-phones a{display:inline-block;margin-right:18px;text-decoration:none;color:var(--accent);font-weight:800}
+    .small{color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media(max-width:980px){.hero{grid-template-columns:1fr;padding:40px 5%}.slideshow{height:320px}.hero h2{font-size:34px}.hero-left{order:2}.card{order:1}}
+    @media(max-width:520px){.hero h2{font-size:26px}.features{flex-direction:column}}
+
+    /* micro interactions */
+    .btn:active{transform:translateY(1px)}
+    .logo{transition:transform .28s ease} .logo:hover{transform:scale(1.03)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">NT</div>
+      <div>
+        <h1>Нічне Таксі</h1>
+        <p>24/7 — швидко, надійно, в безпеці</p>
+      </div>
+    </div>
+
+    <nav>
+      <a class="ghost" href="tel:+380991112233">📞 +38 (099) 111 22 33</a>
+      <a class="ghost" href="tel:+380931112233">📞 +38 (093) 111 22 33</a>
+      <a class="btn" href="https://t.me/your_taxi_telegram" target="_blank" rel="noopener">Написати в Telegram</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-left">
+        <span class="eyebrow">Цілодобово • Нічні поїздки • Комендантська година</span>
+        <h2>Повертаємо додому тихої ночі — швидко, безпечно та з комфортом</h2>
+        <p class="lead">Наше нічне таксі працює 24/7 — ми розуміємо, як важливо дістатися додому вночі. Комфортні авто, ввічливі водії та швидка подача — ми поряд коли треба.</p>
+
+        <div class="features">
+          <div class="feature">
+            <h4>Швидка подача</h4>
+            <p>Авто приїжджає в середньому за 6–10 хвилин у межах міста.</p>
+          </div>
+          <div class="feature">
+            <h4>Професійні водії</h4>
+            <p>Досвід, чемність та акуратна їзда вночі.</p>
+          </div>
+          <div class="feature">
+            <h4>Безпека</h4>
+            <p>Трекінг поїздки та підтримка 24/7.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="ghost" href="#more">Детальніше</a>
+          <a class="btn" href="tel:+380991112233">Замовити зараз</a>
+        </div>
+      </div>
+
+      <aside style="max-width:420px">
+        <div class="card">
+          <div class="slideshow" id="slideshow" aria-label="Галерея таксі">
+            <div class="slides" id="slides">
+              <div class="slide" style="background-image:url('https://allkharkov.ua/img_61102.jpg')"><div class="caption">Комфортні седани</div></div>
+              <div class="slide" style="background-image:url('https://transfer-taxi.com.ua/wp-content/uploads/2022/07/car-big.png')"><div class="caption">Швидка подача</div></div>
+              <div class="slide" style="background-image:url('https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png')"><div class="caption">Надійні водії</div></div>
+            </div>
+            <button class="arrow left" id="prev" aria-label="Попередній слайд">
+              <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+            </button>
+            <button class="arrow right" id="next" aria-label="Наступний слайд">
+              <svg viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>
+            </button>
+            <div class="dots" id="dots" role="tablist" aria-label="Навігація слайдів"></div>
+          </div>
+
+          <div style="margin-top:16px;text-align:center">
+            <div class="phones">
+              <a href="tel:+380991112233">📞 +38 (099) 111 22 33</a>
+              <a href="tel:+380931112233">📞 +38 (093) 111 22 33</a>
+            </div>
+            <div class="telegram">
+              <a href="https://t.me/your_taxi_telegram" target="_blank" rel="noopener">Написати в Telegram</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="more" class="section">
+      <div class="grid">
+        <div>
+          <h3>Про нас</h3>
+          <p class="text-large">Ми надаємо послуги нічного таксі вже багато років. Наша мета — допомогти кожному пасажиру відчути себе спокійно та захищено незалежно від часу доби. Автопарк: економ, комфорт, мінівен. Водії — з ліцензією та досвідом.</p>
+
+          <p class="text-large">Якщо потрібно змінити маршрут або час поїздки — повідомте диспетчера або напишіть у Telegram. Для регулярних поїздок — індивідуальні умови та фіксовані тарифи.</p>
+
+          <p class="text-large">Працюємо навіть під час комендантської години: у разі необхідності — організуємо безпечну доставку додому.</p>
+        </div>
+
+        <div>
+          <h3>Чому обирають нас</h3>
+          <ul class="text-large">
+            <li>Цілодобова підтримка та диспетчерська служба.</li>
+            <li>Прозоре ціноутворення — без прихованих доплат.</li>
+            <li>Опція «суто нічна поїздка» — комфортні авто для нічних змін.</li>
+            <li>Можливість попереднього замовлення та бронювання авто.</li>
+            <li>Швидка реакція та можливість відстежити авто на карті по телефону.</li>
+          </ul>
+
+          <h4 style="margin-top:18px">Додаткові сервіси</h4>
+          <p class="text-large">Транспортування багажу, зустрічі в аеропорту чи на вокзалі, тривалі поїздки за місто — ми організуємо поїздку відповідно до ваших потреб.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <strong>Нічне Таксі</strong>
+        <div class="small">Працюємо 24/7 — навіть у комендантську годину</div>
+      </div>
+
+      <div class="footer-phones">
+        <a href="tel:+380991112233">📞 +38 (099) 111 22 33</a>
+        <a href="tel:+380931112233">📞 +38 (093) 111 22 33</a>
+      </div>
+
+      <div style="text-align:right">
+        <div class="small">Напишіть нам у Telegram</div>
+        <div style="margin-top:18px"><a class="btn" href="https://t.me/your_taxi_telegram" target="_blank" rel="noopener">Написати</a></div>
+      </div>
+    </div>
+
+  </footer>
+
+  <script>
+    // Accessible, touch-friendly slider — fixed and improved
+    (function(){
+      const slidesEl = document.getElementById('slides');
+      const slides = Array.from(slidesEl.children);
+      const dotsEl = document.getElementById('dots');
+      const prevBtn = document.getElementById('prev');
+      const nextBtn = document.getElementById('next');
+      let idx = 0; const total = slides.length; let timer = null; const INTERVAL = 3500;
+
+      function renderDots(){
+        dotsEl.innerHTML = '';
+        slides.forEach((s,i)=>{
+          const btn = document.createElement('button');
+          btn.className = 'dot' + (i===0? ' active':'');
+          btn.setAttribute('aria-label', 'Перейти до слайду ' + (i+1));
+          btn.addEventListener('click', ()=> go(i));
+          dotsEl.appendChild(btn);
+        });
+      }
+
+      function update(){
+        slidesEl.style.transform = 'translateX(-' + (idx * 100) + '%)';
+        Array.from(dotsEl.children).forEach((d,di)=> d.classList.toggle('active', di===idx));
+      }
+
+      function go(i){ idx = (i + total) % total; update(); }
+
+      prevBtn.addEventListener('click', ()=>{ go(idx-1); resetTimer(); });
+      nextBtn.addEventListener('click', ()=>{ go(idx+1); resetTimer(); });
+
+      // keyboard
+      document.addEventListener('keydown', (e)=>{ if(e.key==='ArrowLeft') prevBtn.click(); if(e.key==='ArrowRight') nextBtn.click(); });
+
+      // touch support
+      let startX = null;
+      slidesEl.addEventListener('touchstart', (e)=>{ startX = e.touches[0].clientX; clearInterval(timer); });
+      slidesEl.addEventListener('touchend', (e)=>{
+        if(startX===null) return; const dx = e.changedTouches[0].clientX - startX; if(Math.abs(dx) > 40){ if(dx < 0) go(idx+1); else go(idx-1); }
+        startX = null; resetTimer();
+      });
+
+      // auto-play
+      function startTimer(){ timer = setInterval(()=> go(idx+1), INTERVAL); }
+      function resetTimer(){ clearInterval(timer); startTimer(); }
+
+      // lazy-fallback if images blocked: ensure slides have background images; no external layout shift
+      slides.forEach(s=> s.style.backgroundSize = 'cover');
+
+      renderDots(); update(); startTimer();
+
+      // expose for debugging
+      window._nt_slider = {go, next: ()=>go(idx+1), prev: ()=>go(idx-1)};
+    })();
+  </script>
+</body>
+</html>
