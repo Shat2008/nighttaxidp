@@ -2,10 +2,51 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8">
+
+  <!-- Google verification -->
   <meta name="google-site-verification" content="pVo0Giv9cALz7CWtMi4gGS9GRE8QKJlRGiaOsa0UUqA">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-  <title>Нічне Таксі — VIP • 24/7</title>
+
+  <!-- SEO -->
+  <title>Нічне Таксі Дніпро • Нічні поїздки • 24/7 • Швидка подача</title>
+
+  <meta name="description" content="Нічне таксі у Дніпрі. Працюємо 24/7. Швидка подача 6–10 хвилин, професійні водії, безпечні нічні поїздки. Замовити таксі: +380936414485.">
+
+  <meta name="keywords" content="нічне таксі дніпро, таксі дніпро, нічне таксі, таксі вночі, таксі 24/7 дніпро, нічна подача авто, виклик таксі дніпро">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Night Taxi DP">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Нічне Таксі Дніпро • 24/7">
+  <meta property="og:description" content="Швидка подача 6–10 хвилин. Безпечні нічні поїздки. Замовити: +380936414485">
+  <meta property="og:url" content="https://shat2008.github.io/nighttaxidp/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TaxiService",
+    "name": "Нічне Таксі Дніпро",
+    "image": "https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Дніпро",
+      "addressCountry": "UA"
+    },
+    "telephone": "+380936414485",
+    "url": "https://shat2008.github.io/nighttaxidp/",
+    "areaServed": "Дніпро",
+    "openingHours": "Mo-Su 00:00-23:59"
+  }
+  </script>
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
     :root{
       --bg:#05060a; --card:#0b0d10; --accent:#ffd600; --accent-2:#ffb300; --muted:#9aa4b2;
@@ -174,7 +215,7 @@
         slides.forEach((s,i)=>{
           const d=document.createElement('button');
           d.className='dot'+(i===0?' active':'');
-          d.onclick=()=>{idx=i;update();}
+          d.onclick=()=>{idx=i;update();};
           dotsEl.appendChild(d);
         });
       }
