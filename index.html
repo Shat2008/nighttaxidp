@@ -2,46 +2,78 @@
 <html lang="uk">
 <head>
   <meta charset="utf-8">
-
-  <!-- Google verification -->
   <meta name="google-site-verification" content="pVo0Giv9cALz7CWtMi4gGS9GRE8QKJlRGiaOsa0UUqA">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <!-- SEO -->
-  <title>Нічне Таксі Дніпро • Нічні поїздки • 24/7 • Швидка подача</title>
+  <!-- Primary SEO (Ukr) -->
+  <title>Нічне таксі Дніпро — Замовити таксі 24/7 • VIP сервіс • Швидка подача</title>
+  <meta name="description" content="Нічне таксі в Дніпрі. Виклик 24/7 — швидка подача 6–10 хвилин, комфортні авто, досвідчені водії. Замовити: +380936414485 (Telegram: @jjjkk220).">
+  <meta name="keywords" content="нічне таксі дніпро, таксі дніпро, таксі 24/7, виклик таксі дніпро, нічна подача авто, VIP таксі Дніпро">
 
-  <meta name="description" content="Нічне таксі у Дніпрі. Працюємо 24/7. Швидка подача 6–10 хвилин, професійні водії, безпечні нічні поїздки. Замовити таксі: +380936414485.">
-
-  <meta name="keywords" content="нічне таксі дніпро, таксі дніпро, нічне таксі, таксі вночі, таксі 24/7 дніпро, нічна подача авто, виклик таксі дніпро">
+  <!-- Russian keywords (helps for bilingual queries) -->
+  <meta name="keywords" content="ночное такси днепр, такси днепр, такси ночью, вызвать такси днепр, такси 24/7" />
 
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Night Taxi DP">
+  <meta name="author" content="Нічне Таксі Дніпро">
+
+  <!-- Canonical + alternates -->
+  <link rel="canonical" href="https://shat2008.github.io/nighttaxidp/">
+  <!-- alternate for Russian (same page with query param) -->
+  <link rel="alternate" href="https://shat2008.github.io/nighttaxidp/?hl=ru" hreflang="ru">
+  <link rel="alternate" href="https://shat2008.github.io/nighttaxidp/" hreflang="uk">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Нічне Таксі Дніпро • 24/7">
-  <meta property="og:description" content="Швидка подача 6–10 хвилин. Безпечні нічні поїздки. Замовити: +380936414485">
+  <meta property="og:site_name" content="Нічне Таксі Дніпро">
+  <meta property="og:title" content="Нічне Таксі Дніпро • 24/7 • Швидка подача">
+  <meta property="og:description" content="Нічне таксі в Дніпрі. Швидка подача 6–10 хв, безпека, VIP-авто. Замовлення: +380936414485">
   <meta property="og:url" content="https://shat2008.github.io/nighttaxidp/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png">
 
-  <!-- Schema.org -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Нічне Таксі Дніпро • 24/7">
+  <meta name="twitter:description" content="Виклик таксі в Дніпрі 24/7 — швидка подача, комфортні авто, безпека. Телефон: +380936414485">
+  <meta name="twitter:image" content="https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png">
+
+  <!-- Schema.org / LocalBusiness & TaxiService -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TaxiService",
     "name": "Нічне Таксі Дніпро",
+    "description": "Нічне таксі в Дніпрі. Працюємо 24/7. Швидка подача 6–10 хвилин, VIP-авто, досвідчені водії.",
+    "url": "https://shat2008.github.io/nighttaxidp/",
+    "telephone": "+380936414485",
     "image": "https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Дніпро",
       "addressCountry": "UA"
     },
-    "telephone": "+380936414485",
-    "url": "https://shat2008.github.io/nighttaxidp/",
-    "areaServed": "Дніпро",
-    "openingHours": "Mo-Su 00:00-23:59"
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Дніпро"
+      }
+    ],
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://t.me/jjjkk220"
+    ],
+    "potentialAction": {
+      "@type": "ReserveAction",
+      "target": "tel:+380936414485"
+    }
   }
   </script>
 
@@ -50,186 +82,276 @@
   <style>
     :root{
       --bg:#05060a; --card:#0b0d10; --accent:#ffd600; --accent-2:#ffb300; --muted:#9aa4b2;
-      --radius:14px; --shadow:0 6px 30px rgba(0,0,0,0.6);
+      --radius:14px; --shadow:0 6px 30px rgba(0,0,0,0.55);
+      --maxwidth:1100px;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:Inter,system-ui;background:linear-gradient(180deg,#020306,#07101a);color:#eef3ff}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;background:linear-gradient(180deg,#020306,#07101a);color:#eef3ff;line-height:1.4}
     a{text-decoration:none;color:inherit}
-
-    header{display:flex;align-items:center;justify-content:space-between;padding:14px 20px;position:sticky;top:0;z-index:100;background:rgba(0,0,0,0.35);backdrop-filter:blur(8px)}
+    .wrap{max-width:var(--maxwidth);margin:18px auto;padding:12px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:14px;background:rgba(0,0,0,0.35);border-radius:12px}
     .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:54px;height:54px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:900;color:#07101a;font-size:20px}
-
-    nav{display:flex;gap:10px;flex-wrap:wrap}
+    .logo{width:60px;height:60px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:900;color:#07101a;font-size:20px}
+    nav{display:flex;gap:8px;align-items:center}
     .btn{background:var(--accent);padding:10px 16px;border-radius:12px;font-weight:800;color:#000}
-    .ghost{background:rgba(255,255,255,0.05);padding:8px 14px;border-radius:10px;color:var(--muted)}
+    .ghost{background:rgba(255,255,255,0.04);padding:8px 12px;border-radius:10px;color:var(--muted)}
+    .lang-switch{display:flex;gap:8px;align-items:center}
+    .lang-btn{cursor:pointer;padding:6px 10px;border-radius:8px;background:rgba(255,255,255,0.03);font-weight:700;color:var(--muted)}
+    .lang-btn.active{background:var(--accent);color:#000}
 
-    .hero{padding:30px 20px;display:flex;flex-direction:column;gap:24px}
-    .hero-left{text-align:center}
-    .hero-left h2{font-size:28px;line-height:1.2;margin:14px 0}
-    .lead{color:var(--muted);font-size:16px}
+    .hero{display:flex;flex-direction:column;gap:18px;margin-top:18px}
+    @media(min-width:900px){ .hero{flex-direction:row;gap:30px} }
+    .hero-left{flex:1;padding:18px;background:rgba(255,255,255,0.02);border-radius:12px}
+    .hero-left h2{font-size:24px;margin:10px 0}
+    .lead{color:var(--muted);font-size:15px}
+    .features{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+    .feature{background:rgba(255,255,255,0.03);padding:10px;border-radius:10px;color:var(--muted)}
 
-    .features{display:flex;flex-direction:column;gap:12px;margin-top:18px}
-    .feature{background:rgba(255,255,255,0.05);padding:14px;border-radius:12px;text-align:center}
+    aside{width:100%;max-width:420px}
+    .card{padding:16px;border-radius:12px;background:rgba(255,255,255,0.03);display:flex;flex-direction:column;gap:12px;align-items:center}
 
-    aside{width:100%;max-width:420px;margin:0 auto}
-    .card{background:rgba(255,255,255,0.04);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,0.05)}
-    .phones a{display:block;margin-bottom:8px;padding:12px;border-radius:10px;background:#0b121c;color:var(--accent);font-weight:800;text-align:center}
+    .phones a{display:block;margin-bottom:6px;padding:10px;border-radius:10px;background:#071421;color:var(--accent);font-weight:800;text-align:center}
+    .small{color:var(--muted);font-size:13px}
 
-    .slideshow{position:relative;height:260px;border-radius:12px;overflow:hidden;background:#000}
-    @media(min-width:900px){ .slideshow{height:420px} }
-
-    .slides{display:flex;height:100%;transition:transform .5s ease}
-    .slide{min-width:100%;background-size:cover;background-position:center;display:flex;align-items:flex-end;padding:18px}
-
-    .caption{background:rgba(0,0,0,0.55);padding:10px;border-radius:8px;font-size:14px}
-
-    .dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:6px}
-    .dot{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,0.25);cursor:pointer}
-    .dot.active{background:var(--accent)}
-
-    .arrow{display:none}
-    @media(min-width:900px){ .arrow{display:block} }
-
-    .section{padding:30px 20px}
-    .grid{display:flex;flex-direction:column;gap:20px}
-    @media(min-width:900px){ .grid{display:grid;grid-template-columns:1fr 1fr;gap:30px} }
-
-    .text-large{color:var(--muted);font-size:17px;line-height:1.8}
-
-    footer{background:#06070b;padding:30px 20px;margin-top:30px}
-    .footer-grid{display:flex;flex-direction:column;gap:20px;text-align:center}
-    @media(min-width:900px){ .footer-grid{flex-direction:row;justify-content:space-between;text-align:left} }
+    .section{margin-top:18px;padding:16px;background:rgba(255,255,255,0.02);border-radius:12px}
+    .grid{display:grid;gap:18px}
+    @media(min-width:900px){ .grid{grid-template-columns:1fr 1fr} }
+    ul{padding-left:18px}
+    footer{margin-top:18px;padding:14px;text-align:center;color:var(--muted)}
+    .seo-block{margin-top:12px;color:var(--muted);font-size:14px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:10px;background:rgba(255,255,255,0.03);font-weight:700}
+    /* small helpers */
+    .visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
   </style>
 </head>
 <body>
-
-  <header>
-    <div class="brand">
-      <div class="logo">NT</div>
-      <div>
-        <h1>Нічне Таксі</h1>
-        <p>24/7 — швидко, надійно, в безпеці</p>
+  <div class="wrap" role="main">
+    <header aria-label="Шапка сайту">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">NT</div>
+        <div>
+          <h1 id="brand-title">Нічне Таксі</h1>
+          <div class="small">24/7 — швидко, надійно, в безпеці</div>
+        </div>
       </div>
-    </div>
 
-    <nav>
-      <a class="ghost" href="tel:+380936414485">📞 +380936414485</a>
-      <a class="btn" href="https://t.me/jjjkk220" target="_blank" rel="noopener">Написати в Telegram</a>
-    </nav>
-  </header>
+      <nav aria-label="Контакти">
+        <div class="lang-switch" role="group" aria-label="Мова">
+          <button id="btn-uk" class="lang-btn active" aria-pressed="true">UKR</button>
+          <button id="btn-ru" class="lang-btn" aria-pressed="false">RU</button>
+        </div>
+        <a class="ghost" href="tel:+380936414485" id="phone-link">📞 +380936414485</a>
+        <a class="btn" href="https://t.me/jjjkk220" target="_blank" rel="noopener" id="tg-link">Написати в Telegram</a>
+      </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-left">
-        <span class="eyebrow">Цілодобово • Нічні поїздки • Комендантська година</span>
+    <section class="hero" aria-label="Герой">
+      <div class="hero-left" id="content-uk">
+        <span class="badge">Цілодобово • Нічні поїздки • Комендантська година</span>
         <h2>Повертаємо додому тихої ночі — швидко, безпечно та з комфортом</h2>
-        <p class="lead">Наше нічне таксі працює 24/7 — ми розуміємо, як важливо дістатися додому вночі.</p>
+        <p class="lead">Наше нічне таксі у Дніпрі працює 24/7. Швидка подача 6–10 хвилин, VIP-автомобілі, опитні водії. Замовлення — телефоном або через Telegram.</p>
 
         <div class="features">
-          <div class="feature"><h4>Швидка подача</h4><p>6–10 хвилин по місту.</p></div>
-          <div class="feature"><h4>Професійні водії</h4><p>Чемність і досвід.</p></div>
-          <div class="feature"><h4>Безпека</h4><p>Трекінг та підтримка.</p></div>
+          <div class="feature"><strong>Швидка подача</strong><div class="small">6–10 хвилин по місту</div></div>
+          <div class="feature"><strong>Професійні водії</strong><div class="small">Досвід, чемність, безпека</div></div>
+          <div class="feature"><strong>Безпека</strong><div class="small">Трекінг та підтримка</div></div>
         </div>
 
-        <div style="margin-top:22px;display:flex;gap:12px;flex-wrap:wrap">
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
           <a class="ghost" href="#more">Детальніше</a>
           <a class="btn" href="tel:+380936414485">Замовити зараз</a>
         </div>
+
+        <div class="seo-block">
+          <h4>Послуги</h4>
+          <p>Нічне таксі Дніпро • Виклик таксі Дніпро • Таксі 24/7 • VIP таксі • Подача на комендантську годину.</p>
+        </div>
       </div>
 
-      <aside style="max-width:420px">
-        <div class="card">
+      <!-- Russian content (hidden by default) -->
+      <div class="hero-left" id="content-ru" style="display:none">
+        <span class="badge">Круглосуточно • Ночные поездки • Комендантский час</span>
+        <h2>Довезём домой ночью — быстро, безопасно и комфортно</h2>
+        <p class="lead">Ночное такси в Днепре работает 24/7. Быстрая подача 6–10 минут, VIP-авто, опытные водители. Заказать — по телефону или в Telegram.</p>
 
-          <div class="slideshow" id="slideshow">
-            <div class="slides" id="slides">
-              <div class="slide" style="background-image:url('https://allkharkov.ua/img_61102.jpg')"><div class="caption">Комфортні седани</div></div>
-              <div class="slide" style="background-image:url('https://transfer-taxi.com.ua/wp-content/uploads/2022/07/car-big.png')"><div class="caption">Швидка подача</div></div>
-              <div class="slide" style="background-image:url('https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png')"><div class="caption">Надійні водії</div></div>
-            </div>
+        <div class="features">
+          <div class="feature"><strong>Быстрая подача</strong><div class="small">6–10 минут по городу</div></div>
+          <div class="feature"><strong>Профессиональные водители</strong><div class="small">Опыт и вежливость</div></div>
+          <div class="feature"><strong>Безопасность</strong><div class="small">Трекинг и поддержка</div></div>
+        </div>
 
-            <div class="dots" id="dots"></div>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="ghost" href="#more">Подробнее</a>
+          <a class="btn" href="tel:+380936414485">Заказать сейчас</a>
+        </div>
+
+        <div class="seo-block">
+          <h4>Услуги</h4>
+          <p>Ночное такси Днепр • Вызов такси Днепр • Такси 24/7 • VIP такси • Подача на комендантский час.</p>
+        </div>
+      </div>
+
+      <aside style="max-width:420px" aria-label="Боковая панель">
+        <div class="card" role="complementary">
+          <div style="width:100%;height:220px;border-radius:10px;overflow:hidden;background:#000;display:flex;align-items:center;justify-content:center">
+            <img src="https://www.taxi-chayka.dp.ua/wp-content/uploads/2020/04/taxi.png" alt="Таксі" style="width:100%;height:100%;object-fit:cover">
           </div>
 
-          <div style="margin-top:16px;text-align:center">
+          <div style="width:100%;margin-top:6px;text-align:center">
             <div class="phones">
               <a href="tel:+380936414485">📞 +380936414485</a>
             </div>
-            <div class="telegram">
-              <a href="https://t.me/jjjkk220" target="_blank" rel="noopener">Написати в Telegram</a>
+            <div style="margin-top:6px">
+              <a class="ghost" href="https://t.me/jjjkk220" target="_blank" rel="noopener">Написати в Telegram</a>
             </div>
+            <div class="small" style="margin-top:8px">Працюємо цілодобово • Дніпро</div>
           </div>
-
         </div>
       </aside>
     </section>
 
-    <section id="more" class="section">
+    <section id="more" class="section" aria-label="Блок про нас">
       <div class="grid">
         <div>
-          <h3>Про нас</h3>
-          <p class="text-large">Ми надаємо послуги нічного таксі багато років...</p>
+          <h3 id="about-title">Про нас</h3>
+          <p class="text-large" id="about-uk">Ми надаємо послуги нічного таксі в Дніпрі багато років. Безпечні поїздки, прозорі тарифи, можливість попереднього замовлення.</p>
+          <p class="text-large" id="about-ru" style="display:none">Мы оказываем услуги ночного такси в Днепре уже несколько лет. Безопасные поездки, прозрачные тарифы и возможность предварительного заказа.</p>
         </div>
 
         <div>
-          <h3>Чому обирають нас</h3>
-          <ul class="text-large">
-            <li>24/7 підтримка</li>
-            <li>Прозорі тарифи</li>
-            <li>Попереднє замовлення</li>
-            <li>Відстеження авто</li>
+          <h3>Чому обирають нас / Почему выбирают нас</h3>
+          <ul>
+            <li>24/7 підтримка / поддержка 24/7</li>
+            <li>Прозорі тарифи / Прозрачные тарифы</li>
+            <li>Попереднє замовлення / Предзаказ</li>
+            <li>Відстеження авто / Отслеживание машины</li>
           </ul>
         </div>
       </div>
     </section>
 
-  </main>
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <strong id="footer-name">Нічне Таксі</strong>
+          <div class="small">Працюємо 24/7 • Дніпро</div>
+        </div>
 
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <strong>Нічне Таксі</strong>
-        <div class="small">Працюємо 24/7</div>
+        <div>
+          <a href="tel:+380936414485">📞 +380936414485</a>
+        </div>
+
+        <div style="text-align:right">
+          <div class="small">Telegram:</div>
+          <div style="margin-top:8px"><a class="btn" href="https://t.me/jjjkk220" target="_blank">Написати</a></div>
+        </div>
       </div>
 
-      <div class="footer-phones">
-        <a href="tel:+380936414485">📞 +380936414485</a>
-      </div>
+      <div style="margin-top:12px" class="small">© <span id="year"></span> Нічне Таксі — Працюємо 24/7</div>
+    </footer>
 
-      <div style="text-align:right">
-        <div class="small">Наш Telegram</div>
-        <div style="margin-top:18px"><a class="btn" href="https://t.me/jjjkk220" target="_blank">Написати</a></div>
-      </div>
+    <!-- Visible SEO text (helps for Russian queries) -->
+    <div style="margin-top:14px;padding:12px;background:rgba(255,255,255,0.02);border-radius:8px">
+      <strong>Ключові запити (українською та російською):</strong>
+      <p class="small">нічне таксі дніпро, таксі дніпро, виклик таксі дніпро, таксі 24/7, ночное такси днепр, вызвать такси днепр</p>
     </div>
-  </footer>
+
+  </div>
 
   <script>
+    // Language switcher (UK <-> RU)
     (function(){
-      const slidesEl = document.getElementById('slides');
-      const slides = Array.from(slidesEl.children);
-      const dotsEl = document.getElementById('dots');
-      let idx = 0; const total = slides.length;
+      const btnUk = document.getElementById('btn-uk');
+      const btnRu = document.getElementById('btn-ru');
+      const contentUk = document.getElementById('content-uk');
+      const contentRu = document.getElementById('content-ru');
+      const aboutUk = document.getElementById('about-uk');
+      const aboutRu = document.getElementById('about-ru');
+      const brandTitle = document.getElementById('brand-title');
+      const footerName = document.getElementById('footer-name');
+      const phoneLink = document.getElementById('phone-link');
+      const tg = document.getElementById('tg-link');
 
-      function renderDots(){
-        dotsEl.innerHTML = '';
-        slides.forEach((s,i)=>{
-          const d=document.createElement('button');
-          d.className='dot'+(i===0?' active':'');
-          d.onclick=()=>{idx=i;update();};
-          dotsEl.appendChild(d);
-        });
+      function showUK(){
+        btnUk.classList.add('active'); btnUk.setAttribute('aria-pressed','true');
+        btnRu.classList.remove('active'); btnRu.setAttribute('aria-pressed','false');
+        contentUk.style.display='block'; contentRu.style.display='none';
+        aboutUk.style.display='block'; aboutRu.style.display='none';
+        brandTitle.textContent='Нічне Таксі';
+        footerName.textContent='Нічне Таксі';
+        phoneLink.textContent='📞 +380936414485';
+        tg.textContent='Написати в Telegram';
+        // set meta tags for UA (best-effort: visually update document title)
+        document.title = 'Нічне таксі Дніпро — Замовити таксі 24/7 • VIP сервіс';
+        // If query param ?hl=ru present, reflect toggle state on load
       }
 
-      function update(){
-        slidesEl.style.transform='translateX(-'+(idx*100)+'%)';
-        [...dotsEl.children].forEach((d,i)=>d.classList.toggle('active',i===idx));
+      function showRU(){
+        btnRu.classList.add('active'); btnRu.setAttribute('aria-pressed','true');
+        btnUk.classList.remove('active'); btnUk.setAttribute('aria-pressed','false');
+        contentUk.style.display='none'; contentRu.style.display='block';
+        aboutUk.style.display='none'; aboutRu.style.display='block';
+        brandTitle.textContent='Ночное Такси';
+        footerName.textContent='Ночное Такси';
+        phoneLink.textContent='📞 +380936414485';
+        tg.textContent='Написать в Telegram';
+        document.title = 'Ночное такси Днепр — Вызвать такси 24/7 • VIP сервис';
       }
 
-      renderDots();
-      update();
-      setInterval(()=>{idx=(idx+1)%total;update();},3500);
+      btnUk.addEventListener('click', showUK);
+      btnRu.addEventListener('click', showRU);
+
+      // On load, if ?hl=ru then switch to RU
+      const params = new URLSearchParams(location.search);
+      if(params.get('hl') === 'ru') showRU(); else showUK();
+
+      // footer year
+      document.getElementById('year').textContent = new Date().getFullYear();
     })();
   </script>
+
+  <!-- INSTRUCTIONS (visible to you as comments) -->
+  <!--
+    Дальше (что ещё нужно сделать на GitHub / в Google чтобы выйти в топ):
+    1) Создай в корне репозитория файлы:
+       - robots.txt
+         Content:
+           User-agent: *
+           Allow: /
+           Sitemap: https://shat2008.github.io/nighttaxidp/sitemap.xml
+
+       - sitemap.xml
+         Minimal:
+           <?xml version="1.0" encoding="UTF-8"?>
+           <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+             <url>
+               <loc>https://shat2008.github.io/nighttaxidp/</loc>
+               <changefreq>daily</changefreq>
+               <priority>1.0</priority>
+             </url>
+           </urlset>
+
+    2) В Google Search Console:
+       - Добавь оба варианта (https://shat2008.github.io/nighttaxidp/ and https://shat2008.github.io/nighttaxidp/?hl=ru)
+       - Request Indexing (URL inspection) после загрузки
+
+    3) Создай Google Business Profile:
+       - Название: "Нічне Таксі Дніпро" (или рус/укр варианты)
+       - Сайт: https://shat2008.github.io/nighttaxidp/
+       - Телефон: +380936414485
+       - Подтверждение: почта / телефон (как предложит Google)
+
+    4) Размести минимум 3 внешних ссылки:
+       - Instagram / Facebook (ссылка в био)
+       - Telegram канал/чат
+       - Локальный каталог/справочник (2GIS, місцевий каталог)
+
+    5) Через пару дней проверяй выдачу:
+       - site:shat2008.github.io
+       - "нічне таксі дніпро" и "ночное такси днепр"
+
+    6) При необходимости — могу подготовить отдельную страницу /ru/index.html с hreflang для ещё лучшего ранжирования по русским запросам.
+  -->
 
 </body>
 </html>
