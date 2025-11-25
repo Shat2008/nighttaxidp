@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shat2008.github.io/nighttaxidp/sitemap.xml
